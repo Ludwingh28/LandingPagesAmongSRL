@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logoAMONG from "./assets/logoAMONG.webp";
 import { ChevronRight, Award, Target, Eye, BarChart3, Star, Plus, Minus, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Menu, X, Building2, Users, Briefcase, Globe } from "lucide-react";
 
 const LandingPage = () => {
@@ -31,7 +32,7 @@ const LandingPage = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               {/* Logo redondeado en navbar */}
-              <img src="/src/assets/logoAMONG.webp" alt="A.M.O.N.G. SRL" className="h-16 w-16 rounded-full object-cover" />
+              <img src={logoAMONG} alt="A.M.O.N.G. SRL" className="h-16 w-16 rounded-full object-cover" />
               <div>
                 <h1 className="text-xl font-bold text-white">A.M.O.N.G. SRL</h1>
                 <p className="text-xs text-gray-300">Agencias de Movilidad</p>
@@ -496,7 +497,7 @@ const LandingPage = () => {
               <div>
                 <div className="flex items-center space-x-2 mb-4">
                   {/* Logo redondeado en footer */}
-                  <img src="/src/assets/logoAMONG.webp" alt="A.M.O.N.G. SRL" className="h-16 w-16 rounded-full object-cover" />
+                  <img src={logoAMONG} alt="A.M.O.N.G. SRL" className="h-16 w-16 rounded-full object-cover" />
                   <div>
                     <h3 className="text-xl font-bold">A.M.O.N.G. SRL</h3>
                     <p className="text-xs text-gray-300">Agencias de Movilidad</p>
