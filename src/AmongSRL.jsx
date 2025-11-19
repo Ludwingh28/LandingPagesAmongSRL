@@ -14,11 +14,11 @@ const LandingPage = () => {
   };
 
   const handleContactClick = () => {
-    window.location.href = "mailto:business@amongsrl.com";
+    window.open(`https://wa.me/59176619516?text=${encodeURIComponent("Hola, quisiera hacer una cotización")}`, "_blank");
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/59173394494?text=Hola,%20quisiera%20hacer%20una%20cotización", "_blank");
+    window.open(`https://wa.me/59176619516?text=${encodeURIComponent("Hola, quisiera hacer una cotización")}`, "_blank");
   };
 
   const currentYear = new Date().getFullYear();
@@ -117,7 +117,7 @@ const LandingPage = () => {
                 <ChevronRight className="ml-2 h-5 w-5" />
               </button>
               <button
-                onClick={handleWhatsAppClick}
+                onClick={() => window.open("https://linktr.ee/A.M.O.N.G", "_blank")}
                 className="border-2 border-yellow-500 hover:bg-yellow-500 hover:text-black text-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 Conocer Más
@@ -371,7 +371,7 @@ const LandingPage = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4 italic">
-                  "Excelente servicio. Me ayudaron a importar equipos para mi negocio desde China. Todo llegó en perfectas condiciones y en el tiempo prometido."
+                  "Excelente servicio. Me ayudaron a importar equipos para mi negocio desde China. Todo llegó in perfectas condiciones y en el tiempo prometido."
                 </p>
                 <div className="flex items-center">
                   <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center mr-4">
@@ -480,9 +480,9 @@ const LandingPage = () => {
 
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">¿Aún tienes preguntas?</p>
-              <button onClick={handleContactClick} className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors">
+              <a href="mailto:info@amongsrl.com" className="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-lg font-semibold transition-colors inline-block">
                 Contáctanos
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -504,18 +504,23 @@ const LandingPage = () => {
                 </div>
                 <p className="text-gray-300 mb-4">Facilitando el proceso de importación para conectar a nuestros clientes con el mundo.</p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
-                    <Facebook className="h-6 w-6" />
+                  <a href="https://www.tiktok.com/@amongsrl" target="_blank" rel="noreferrer" aria-label="TikTok" className="p-1 rounded-md text-gray-300 hover:bg-yellow-500 transition-colors">
+                    <img src="https://img.icons8.com/glyph-neue/64/FFFFFF/tiktok.png" alt="TikTok" className="h-6 w-6" />
                   </a>
-                  <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
-                    <Twitter className="h-6 w-6" />
-                  </a>
-                  <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
+
+                  <a
+                    href="https://www.instagram.com/a.m.o.n.g_bolivia_s.r.l"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Instagram"
+                    className="p-1 rounded-md text-gray-300 hover:bg-yellow-500 transition-colors"
+                  >
                     <Instagram className="h-6 w-6" />
                   </a>
-                  <a href="#" className="text-gray-300 hover:text-yellow-500 transition-colors">
-                    <Linkedin className="h-6 w-6" />
-                  </a>
+
+                  <button onClick={handleWhatsAppClick} aria-label="WhatsApp" className="p-1 rounded-md text-gray-300 hover:bg-yellow-500 transition-colors">
+                    <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/whatsapp--v2.png" alt="WhatsApp" className="h-6 w-6" />
+                  </button>
                 </div>
               </div>
 
